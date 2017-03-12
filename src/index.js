@@ -1,6 +1,6 @@
 import 'pixi.js'
 import TWEEN                                   from 'tween.js'
-import Howler                                  from 'howler'
+import { Howler }                              from 'howler'
 import { createStore, applyMiddleware }        from 'redux'
 import thunk                                   from 'redux-thunk'
 import resources                               from './resources'
@@ -25,7 +25,7 @@ renderer.autoResize          = true
 renderer.backgroundColor     = 0x1d0c1e
 document.body.appendChild(renderer.view)
 
-Howler.Howler.mute(true)
+Howler.mute(false)
 
 const stage = new PIXI.Container()
 
