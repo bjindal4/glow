@@ -1,0 +1,32 @@
+{
+  "name": "glow",
+  "description": "Glow is a javascript based shooter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "howler": "^2.0.2",
+    "keyboardjs": "^2.3.3",
+    "lodash": "^4.17.4",
+    "pixi-particles": "^2.1.4",
+    "pixi.js": "^4.4.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "tween.js": "^16.6.0",
+    "victor": "^1.1.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --port 5000"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "brfs": "^1.4.3",
+    "file-loader": "^0.10.1",
+    "json-loader": "^0.5.4",
+    "transform-loader": "^0.2.4",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
