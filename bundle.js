@@ -44543,8 +44543,7 @@ var Hud = function (_PIXI$Container) {
             this.logo = new PIXI.Sprite(resources.logo.texture);
 
             this.logo.anchor.set(.5, .5);
-            this.logo.x = this.screenWidth * .5;
-            this.logo.y = 60;
+            this.logo.position.set(this.screenWidth * .5, 50);
 
             this.addChild(this.logo);
         }
@@ -46022,7 +46021,7 @@ var Credits = function (_PIXI$Container) {
 
         _this.logo = new PIXI.Sprite(resources.logo.texture);
         _this.logo.anchor.set(.5, .5);
-        _this.logo.position.set(width * .5, 60);
+        _this.logo.position.set(width * .5, 50);
         _this.addChild(_this.logo);
 
         _this.menu = new _Menu2.default({
@@ -46534,7 +46533,7 @@ var Help = function (_PIXI$Container) {
 
         _this.logo = new PIXI.Sprite(resources.logo.texture);
         _this.logo.anchor.set(.5, .5);
-        _this.logo.position.set(width * .5, 60);
+        _this.logo.position.set(width * .5, 50);
         _this.addChild(_this.logo);
 
         _this.menu = new _Menu2.default({
@@ -46670,7 +46669,7 @@ var Home = function (_PIXI$Container) {
 
         _this.logo = new PIXI.Sprite(resources.logo.texture);
         _this.logo.anchor.set(.5, .5);
-        _this.logo.position.set(width * .5, 60);
+        _this.logo.position.set(width * .5, 50);
         _this.addChild(_this.logo);
 
         _this.menu = new _Menu2.default({
@@ -46795,7 +46794,7 @@ var Settings = function (_PIXI$Container) {
 
         _this.logo = new PIXI.Sprite(resources.logo.texture);
         _this.logo.anchor.set(.5, .5);
-        _this.logo.position.set(width * .5, 60);
+        _this.logo.position.set(width * .5, 50);
         _this.addChild(_this.logo);
 
         _this.menu = new _Menu2.default({
@@ -68863,14 +68862,15 @@ var _window = window,
     screenHeight = _window.innerHeight;
 
 
+screenWidth = 1200;
+screenHeight = 900;
+
 store.dispatch(actions.setScreenDimensions(screenWidth, screenHeight));
 
 var renderer = new PIXI.WebGLRenderer(screenWidth, screenHeight, { resolution: 1 });
-renderer.view.style.position = 'absolute';
-renderer.view.style.display = 'block';
-renderer.autoResize = true;
+renderer.autoResize = false;
 renderer.backgroundColor = 0x1d0c1e;
-document.body.appendChild(renderer.view);
+document.getElementById('game').appendChild(renderer.view);
 
 _howler.Howler.mute(false);
 
