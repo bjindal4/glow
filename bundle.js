@@ -44231,8 +44231,8 @@ var GameOver = function (_PIXI$Container) {
                 this.visible = true;
                 this.skullHeadTween.start();
             } else {
-                this.visible = false;
                 this.skullHeadTween.stop();
+                this.visible = false;
             }
         }
     }]);
@@ -46266,7 +46266,7 @@ var Game = function (_PIXI$Container) {
                 });
             });
 
-            var asteroidEmitter = new _Emitter2.default(80, function () {
+            var asteroidEmitter = new _Emitter2.default(60, function () {
                 var asteroid = new _enemies.Asteroid(_this3.store);
 
                 var _store$getState2 = _this3.store.getState(),
@@ -46278,7 +46278,7 @@ var Game = function (_PIXI$Container) {
                 _this3.store.dispatch((0, _actions.spawnEnemy)(asteroid));
             });
 
-            var saucerEmitter = new _Emitter2.default(40, function () {
+            var saucerEmitter = new _Emitter2.default(30, function () {
                 var saucer = new _enemies.Saucer(_this3.store);
 
                 var _store$getState3 = _this3.store.getState(),
