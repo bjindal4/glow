@@ -45677,7 +45677,7 @@ exports.default = player;
 
 var _actions = __webpack_require__(3);
 
-var MAX_LIVES = exports.MAX_LIVES = 0;
+var MAX_LIVES = exports.MAX_LIVES = 3;
 
 function player() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
