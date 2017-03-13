@@ -21113,7 +21113,7 @@ exports.default = {
     }),
     reward: new _howler.Howl({
         src: _shnur__coin2.default,
-        volume: .2
+        volume: .1
     })
 };
 
@@ -33861,6 +33861,7 @@ var removePopup = exports.removePopup = function removePopup(item) {
 };
 
 var startGame = exports.startGame = function startGame() {
+    _sounds2.default.gameLoop.volume(.6);
     _sounds2.default.gameLoop.play();
 
     return { type: GAME_START };
@@ -33874,15 +33875,13 @@ var gameOver = exports.gameOver = function gameOver() {
 };
 
 var pause = exports.pause = function pause() {
-    _sounds2.default.gameLoop.stop();
-    _sounds2.default.pausedLoop.play();
+    _sounds2.default.gameLoop.volume(.2);
 
     return { type: GAME_PAUSE };
 };
 
 var resume = exports.resume = function resume() {
-    _sounds2.default.pausedLoop.stop();
-    _sounds2.default.gameLoop.play();
+    _sounds2.default.gameLoop.volume(.6);
 
     return { type: GAME_RESUME };
 };
@@ -33931,7 +33930,7 @@ var spawnPopup = exports.spawnPopup = function spawnPopup(popup) {
 var stopGame = exports.stopGame = function stopGame() {
     return function (dispatch) {
         _sounds2.default.gameLoop.stop();
-        _sounds2.default.pausedLoop.stop();
+        _sounds2.default.gameLoop.volume(.2);
 
         dispatch((0, _index.resetPlayerHealth)());
         dispatch((0, _index.resetPlayerLives)());
