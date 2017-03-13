@@ -44533,7 +44533,6 @@ var Hud = function (_PIXI$Container) {
 
         _this.buildLogo();
         _this.buildScore();
-        _this.buildCopyright();
         return _this;
     }
 
@@ -44561,19 +44560,6 @@ var Hud = function (_PIXI$Container) {
             this.score.y = 18;
 
             this.addChild(this.score);
-        }
-    }, {
-        key: 'buildCopyright',
-        value: function buildCopyright() {
-            this.copyright = new PIXI.Text('\xA9 Rapha\xEBl Benitte - 2017', {
-                fontFamily: 'Arial',
-                fontSize: 14,
-                fill: '#9c4b99',
-                align: 'right'
-            });
-            this.copyright.x = this.screenWidth - 20 - this.copyright.width;
-            this.copyright.y = this.screenHeight - 36;
-            this.addChild(this.copyright);
         }
     }, {
         key: 'update',
@@ -68886,6 +68872,16 @@ var setup = function setup() {
 
     store.dispatch(actions.setScenes(scenes));
     store.dispatch(actions.setCurrentScene('home'));
+
+    var copyright = new PIXI.Text('\xA9 Rapha\xEBl Benitte - 2017', {
+        fontFamily: 'Arial',
+        fontSize: 14,
+        fill: '#9c4b99',
+        align: 'right'
+    });
+    copyright.x = screenWidth - 20 - copyright.width;
+    copyright.y = screenHeight - 36;
+    stage.addChild(copyright);
 
     tick();
 };
