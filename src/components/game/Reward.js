@@ -9,7 +9,7 @@ export default class Reward extends PIXI.Sprite {
         this.anchor.set(.5, .5)
 
         this.vx = 0
-        this.vy = 2
+        this.vy = 1
 
         this.shouldBeRemoved = false
 

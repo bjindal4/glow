@@ -153,7 +153,7 @@ export default class Game extends PIXI.Container {
             })
         })
 
-        const asteroidEmitter = new Emitter(60, () => {
+        const asteroidEmitter = new Emitter(80, () => {
             const asteroid = new Asteroid(this.store)
 
             const { screen: { width } } = this.store.getState()
@@ -164,7 +164,7 @@ export default class Game extends PIXI.Container {
             this.store.dispatch(spawnEnemy(asteroid))
         })
 
-        const saucerEmitter = new Emitter(30, () => {
+        const saucerEmitter = new Emitter(40, () => {
             const saucer = new Saucer(this.store)
 
             const { screen: { width } } = this.store.getState()

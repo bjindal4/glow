@@ -1,5 +1,5 @@
-import Popup                                     from '../Popup'
-import { spawnRewards, spawnPopup, removePopup } from '../../../actions'
+import Popup                        from '../Popup'
+import { spawnRewards, spawnPopup } from '../../../actions'
 
 export default class Enemy extends PIXI.Container {
     constructor(store) {

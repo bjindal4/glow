@@ -14,8 +14,8 @@ export default class Saucer extends Enemy {
         this.hitRect = {
             x:      -20,
             y:      -20,
-            width:  40,
-            height: 40,
+            width:   40,
+            height:  40,
         }
 
         this.vy           = 3
@@ -24,15 +24,15 @@ export default class Saucer extends Enemy {
         this.health       = 1
         this.damage       = 10
         this.points       = 100
-        this.rewardsCount = 1
+        this.rewardsCount = 3
 
         this.shadow = new PIXI.Sprite(resources.saucerShadow.texture)
         this.shadow.y = 14
-        this.shadow.pivot.set(26, 26)
+        this.shadow.anchor.set(.5, .5)
         this.addChild(this.shadow)
 
         this.graphic = new PIXI.Sprite(resources.saucer.texture)
-        this.graphic.pivot.set(26, 26)
+        this.graphic.anchor.set(.5, .5)
         this.addChild(this.graphic)
     }
 
@@ -40,7 +40,7 @@ export default class Saucer extends Enemy {
         super.die()
 
         this.spawnPoints('#35eff5')
-        this.spawnRewards(1)
+        this.spawnRewards(this.rewardsCount)
 
         this.vy = 0
 

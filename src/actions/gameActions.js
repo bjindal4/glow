@@ -1,5 +1,5 @@
-import _      from 'lodash'
-import Reward from '../components/game/Reward'
+import Reward       from '../components/game/Reward'
+import { makeGrid } from '../lib/arrange'
 import {
     resetPlayerHealth,
     resetPlayerLives,
@@ -29,11 +29,9 @@ export const removePopup  = item => ({ type: REMOVE_POPUP, item, layer: 'game.po
 
 export const spawnRewards = (x, y, count) => {
     return dispatch => {
-        _.range(count).forEach(() => {
+        makeGrid(x, y, count, 36, { spacing: 3 }).forEach(cell => {
             const reward = new Reward()
-
-            reward.x = x + Math.random() * 60 - 30
-            reward.y = y + Math.random() * 60 - 30
+            reward.position.set(cell.x, cell.y)
 
             dispatch(spawnReward(reward))
         })
