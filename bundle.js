@@ -43519,7 +43519,7 @@ var Ship = function (_PIXI$Container) {
             if (this.collisionTween) this.collisionTween.stop();
             if (this.launchTween) this.launchTween.stop();
 
-            this.launchTween = new _tween2.default.Tween({ scale: 2, y: -200 }).to({ scale: 1, y: 0 }, 2400).delay(600).easing(_tween2.default.Easing.Exponential.Out).onStart(function () {
+            this.launchTween = new _tween2.default.Tween({ scale: 2, y: -200 }).to({ scale: 1, y: 0 }, 800).delay(400).easing(_tween2.default.Easing.Exponential.Out).onStart(function () {
                 _this4.visible = true;
                 self.winkTween.start();
             }).onUpdate(function () {
