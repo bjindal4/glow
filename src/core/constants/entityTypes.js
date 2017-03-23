@@ -1,0 +1,6 @@
+export const ENTITY_TYPE_SHIP    = 'entity.ship'
+export const ENTITY_TYPE_MISSILE = 'entity.missile'
+export const ENTITY_TYPE_SHOT    = 'entity.shot'
+export const ENTITY_TYPE_ENEMY   = 'entity.asteroid'
+export const ENTITY_TYPE_BONUS   = 'entity.bonus'
+export const ENTITY_TYPE_REWARD  = 'entity.reward'

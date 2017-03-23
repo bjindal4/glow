@@ -1,0 +1,5 @@
+.hud__main,
+.hud__indicators {
+    box-shadow: none !important;
+    background: transparent !important;
+}

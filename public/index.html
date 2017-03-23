@@ -9,8 +9,27 @@
         margin: 0;
         padding: 0;
       }
+      html,
+      body {
+        background-color: #140812;
+        height: 100%;
+        width:  100%;
+        font-family: monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      #game {
+        height: 100%;
+        width:  100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
+    <div id="game"></div>
+    <div id="hud"></div>
   </body>
 </html>

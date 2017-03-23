@@ -1,6 +1,0 @@
-export { default as Hud }         from './hud/Hud'
-export { default as Background }  from './Background'
-export { default as Bonuses }     from './Bonuses'
-export { default as DarkOverlay } from './DarkOverlay'
-export { default as PauseMenu }   from './PauseMenu'
-export { default as Popups }      from './Popups'

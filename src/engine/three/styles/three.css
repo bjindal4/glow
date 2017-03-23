@@ -1,0 +1,188 @@
+.three__hud {
+    font-family: monospace;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.three__hud__main,
+.three__hud__indicators {
+    position: fixed;
+    bottom: 20px;
+    background-color: rgba(10, 5, 8, .35);
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 160px;
+    box-shadow: 0 0 30px 2px rgba(83, 29, 72, 0.65);
+}
+
+.three__hud__health__label,
+.three__hud__lives,
+.three__hud__indicators__missiles__label,
+.three__hud__indicators__shots__label {
+    color: #f963de;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .9);
+    position: relative;
+}
+
+.three__hud__main {
+    left: 20px;
+    /*transform: perspective(800px) rotateY(7deg) rotateX(15deg) rotateY(12deg);*/
+}
+
+.three__hud__score {
+    color: #bff616;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .9);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.three__hud__health__bar {
+    width: 220px;
+    height: 8px;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+    background-color: #531d48;
+}
+.three__hud__health__bar__inner {
+    background-color: #c140a6;
+    transition: 800ms width;
+}
+
+.three__hud__lives {
+    border-bottom: 1px solid #f963de;
+    padding: 4px 0;
+}
+.three__hud__lives__items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.three__hud__lives__item {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../../assets/graphics/life.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0;
+    transition: 600ms opacity;
+}
+.three__hud__lives__item._is-active {
+    opacity: 1;
+}
+
+.three__hud__indicators {
+    right: 20px;
+    /*transform: perspective(800px) rotateY(-7deg) rotateX(15deg) rotateY(-12deg);*/
+}
+
+.three__hud__indicators__shots__label {
+    color: #54b053;
+}
+.three__hud__indicators__shots__label:after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 16px;
+    background-image: url("../../../assets/graphics/shots_icon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.three__hud__indicators__shots {
+    width: 220px;
+    height: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+}
+.three__hud__indicators__shots__item {
+    background-color: #2e3e2b;
+    transition: 800ms background-color;
+}
+.three__hud__indicators__shots__item--active {
+    background-color: #70db6e;
+    transition: 800ms background-color;
+}
+
+.three__hud__indicators__missiles__label:after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 16px;
+    background-image: url("../../../assets/graphics/missile_icon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.three__hud__indicators__missiles {
+    width: 220px;
+    height: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+}
+.three__hud__indicators__missiles__item {
+    background-color: #531d48;
+    transition: 800ms background-color;
+}
+.three__hud__indicators__missiles__item--active {
+    background-color: #c140a6;
+    transition: 800ms background-color;
+}
+
+.three__hud__indicators__icons {
+    display: flex;
+    background-color: rgba(10, 5, 8, .35);
+    padding: 5px 20px;
+    margin: 0 -20px;
+}
+
+.three__hud__indicators__night,
+.three__hud__indicators__shield {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0;
+    transition: 600ms opacity;
+}
+.three__hud__indicators__night {
+    background-image: url("../../../assets/graphics/night_shift_indicator.png");
+}
+.three__hud__indicators__shield {
+    background-image: url("../../../assets/graphics/shield_indicator.png");
+}
+.three__hud__indicators__night._is-active,
+.three__hud__indicators__shield._is-active {
+    opacity: 1;
+}
